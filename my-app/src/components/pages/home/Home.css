@@ -1,0 +1,44 @@
+@keyframes rainbow-ani { 
+    100% { 
+        background-position: -1200px 0; 
+    } 
+}
+.home {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingLogo {
+    width: 200px; 
+    height: 200px; 
+    background: url("./img/loading.png") no-repeat 0 0 / auto 200px;
+    animation: rainbow-ani 5s infinite steps(6);
+    display: block;
+    margin: 0px auto;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.btn-login {
+    padding: 10px 20px;
+    background: #fa5c58;
+    border: 2px solid #fa5c58;
+    color: #fff;
+}
+.btn-login:hover{
+    padding: 10px 20px;
+    background: none;
+    border: 2px solid #fa5c58;
+    color: #fa5c58;
+    cursor: pointer;
+}
