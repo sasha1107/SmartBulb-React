@@ -5,40 +5,16 @@
     top: 30px;
     right: 30px;
     z-index: 10;
+    cursor: pointer;
 }
-.close {
-    fill: #fff;
+.menuLink {
+    font-weight: 400;
+    color: rgb(195, 194, 194);
+    padding: 7px 0;
 }
-nav {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100vh;
-    padding: 0px 100px;
-    padding-top: 100px;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    box-sizing: border-box;
+.menuLink:hover {
+    background-color: rgba(255, 255, 255, 0.8) ;
+    color: rgb(81, 81, 81);
+    transform: scale(1.1);
+    font-weight: 600;
 }
-
-ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 20px;
-    
-}
-
-li {
-    list-style-type: none;
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
