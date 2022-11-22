@@ -1,10 +1,18 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import styled, { keyframes } from "styled-components";
-import "./Navbar.css"
 import { Link } from "react-router-dom";
+
+const iconStyle = {
+  width: "30px",
+  height: "30px",
+  position: "absolute",
+  top: "30px",
+  right: "30px",
+  zIndex: "10",
+  cursor: "pointer",
+}
 
 const ExpandAni = keyframes`
   0% {
@@ -39,6 +47,18 @@ const MenuList = styled.div`
   font-size: 20px;
 `
 
+const LinkButton = styled(Link)`
+  font-weight: 400;
+  color: rgb(195, 194, 194);
+  padding: 7px 0;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.8) ;
+    color: rgb(81, 81, 81);
+    transform: scale(1.1);
+    font-weight: 600;
+  }
+`;
+
 export default function Navbar() {
   const [expand, setExpand] = useState(false);
 
@@ -50,20 +70,20 @@ export default function Navbar() {
     <>
       {expand ?
       <>
-        <IconContext.Provider value={{ color: "#fafafad6", className: "global-class-name" }}>
-          <FaTimes onClick={handleClickBar} className="icon"/>
+        <IconContext.Provider value={{ color: "#fafafad6"}}>
+          <FaTimes onClick={handleClickBar} style={iconStyle}/>
         </IconContext.Provider>
         <ExpandMenu>
           <MenuTitle>MENU</MenuTitle>
           <MenuList>
-            <Link to="/SmartBulb-React/" className='menuLink'>HOME</Link>
-            <Link to="/SmartBulb-React/" className='menuLink'>DIARY</Link>
-            <Link to="/SmartBulb-React/" className='menuLink'>MYPAGE</Link>
-            <Link to="/SmartBulb-React/login" className='menuLink'>LOGIN</Link>
+            <LinkButton to="/SmartBulb-React/">HOME</LinkButton>
+            <LinkButton to="/SmartBulb-React/">DIARY</LinkButton>
+            <LinkButton to="/SmartBulb-React/">MYPAGE</LinkButton>
+            <LinkButton to="/SmartBulb-React/login">LOGIN</LinkButton>
           </MenuList>
         </ExpandMenu>
       </>
-      : <FaBars onClick={handleClickBar} className="icon"/>
+      : <FaBars onClick={handleClickBar} style={iconStyle}/>
       }
     </>
   )
