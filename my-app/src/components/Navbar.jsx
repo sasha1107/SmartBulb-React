@@ -77,7 +77,7 @@ export default function Navbar() {
           <MenuTitle>MENU</MenuTitle>
           <MenuList>
             <LinkButton to="/SmartBulb-React/">HOME</LinkButton>
-            <LinkButton to="/SmartBulb-React/">DIARY</LinkButton>
+            <LinkButton to="/SmartBulb-React/diary">DIARY</LinkButton>
             <LinkButton to="/SmartBulb-React/">MYPAGE</LinkButton>
             <LinkButton to="/SmartBulb-React/login">LOGIN</LinkButton>
           </MenuList>
