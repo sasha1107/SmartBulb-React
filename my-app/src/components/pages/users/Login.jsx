@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Footer from '../../Footer';
 import Navbar from '../../Navbar';
 import Logo from '../../Logo';
 import UserForm from '../../UserForm';
-import { Link } from "react-router-dom";
 import SignIn from "./SignIn";
 
 
@@ -15,7 +15,6 @@ const LoginSection = styled.div`
     text-align: center;
     display: flex;
     flex-direction:column;
-    /* justify-content: ; */
     align-items: center;
 `
 
