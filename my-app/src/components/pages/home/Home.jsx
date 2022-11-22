@@ -44,13 +44,13 @@ const HomeSection = styled.section`
 `
 const Title = styled.h1`
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 400;
 `
 
 export default function Home() {
     const user = {
-        // login: false,
-        login: true,
+        login: false,
+        // login: true,
         id: 'soohyun',
         email: 'sasha1107@naver.com',
         img : 'https://i.pinimg.com/564x/39/e6/60/39e66091250c901c35c090355250a724.jpg'
