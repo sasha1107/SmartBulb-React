@@ -42,7 +42,8 @@ export default function UserForm(props) {
             <SubTitle>{props.subtit}</SubTitle>
             <HrLine/>
             {props.children}
-            <BtnSubmit>{props.button}</BtnSubmit>
+            {props.button ? <BtnSubmit>{props.button}</BtnSubmit> : <></>}
+            
         </Card>
     )
 }

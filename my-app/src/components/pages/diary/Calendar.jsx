@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './calendar.css'
 
@@ -42,15 +42,84 @@ const BtnMonth = styled.button`
 `
 
 export default function Calendar() {
+    const [calendar, setCalendar] = useState(null)
+    const [month, setMonth] = useState(new Date().getMonth() + 1)
+    const [year, setYear] = useState(new Date().getFullYear())
+
+    function displayCalendar(newYear, newMonth){
+        const time = new Date(newYear, newMonth - 1, 1);
+        const timeLength = new Date(newYear, newMonth, 0).getDate(); // 한 달의 길이
+        // let year = time.getFullYear(),
+            // month = time.getMonth(),
+        let date = time.getDate();
+        let day = time.getDay();
+        let days = Array(42).fill(0)
+        for (let i = day; i < day + timeLength; i++) {
+            days[i]= date++
+        }
+
+        let result = [];
+        let temp = [];
+        for (let i =0; i < 6; i++){
+            for (let j = 0; j <7; j++){
+                temp.push(days.shift())
+            }
+            result.push(temp);
+            temp = [];
+        }
+
+        let renderCalendar = []
+        let temp2 = [];
+        let idx = 1;
+        for (let i = 0; i < 6; i++){
+            for (let j = 0; j < 7; j++){
+                if (result[i][j] !== 0){
+                    temp2.push(<td key={idx++} className="date">{result[i][j]}</td>)
+                }
+                else {
+                    temp2.push(<td key={idx++} className="date"></td>)
+                }
+            }
+            renderCalendar.push(<tr key={idx++}>{temp2}</tr>)
+            temp2 = [];
+        }
+        return renderCalendar;
+    }
+
+    useEffect(() => {
+        setCalendar(displayCalendar(year, month))
+    }, [year, month])
+    
+    function handleCalendar(e){
+        const BtnType = e.currentTarget.id;
+        // console.log(BtnType);
+        if (BtnType === "prev"){
+            if (month === 1){
+                setMonth(12)
+                setYear(year-1)
+            }else {
+                setMonth(month-1)
+            }
+        }
+        else if (BtnType === "next"){
+            if (month === 12){
+                setMonth(1)
+                setYear(year+1)
+            }else {
+                setMonth(month+1)
+            }
+        }
+        setCalendar(displayCalendar(year, month))
+    }
     return (
     <CalendarSection>
         <Navigator>
-            <BtnMonth><FaChevronLeft/></BtnMonth>
+            <BtnMonth onClick={handleCalendar} id="prev"><FaChevronLeft/></BtnMonth>
             <time dateTime="2022-11">
-                <span className="year">2022</span>년
-                <span className="month">11</span>월
+                <span className="year">{year}</span>년
+                <span className="month"> {month}</span>월
             </time>
-            <BtnMonth><FaChevronRight/></BtnMonth>
+            <BtnMonth onClick={handleCalendar} id="next"><FaChevronRight/></BtnMonth>
         </Navigator>
         <table>
             <thead>
@@ -65,62 +134,10 @@ export default function Calendar() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                    <td className="date">6</td>
-                </tr>
-                <tr>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                    <td className="date">5</td>
-                </tr>
-                <tr>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                    <td className="date">4</td>
-                </tr>
-                <tr>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                    <td className="date">3</td>
-                </tr>
-                <tr>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                    <td className="date">2</td>
-                </tr>
-                <tr>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                    <td className="date">1</td>
-                </tr>
+                {calendar}
             </tbody>
         </table>
     </CalendarSection>
     )
+    
 }

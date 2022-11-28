@@ -2,7 +2,7 @@ import Home from "./components/pages/home/Home";
 import LogIn from "./components/pages/users/Login";
 import SignIn from "./components/pages/users/SignIn";
 import Diary from "./components/pages/diary/Diary";
-
+import MyPage from "./components/pages/users/MyPage";
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="SmartBulb-React/" element={<Home />}/>
           <Route path="SmartBulb-React/diary" element={<Diary />}/>
-          {/* <Route path="/" element={<MyPage />}/> */}
+          <Route path="SmartBulb-React/mypage" element={<MyPage />}/>
           <Route path="SmartBulb-React/login" element={<LogIn />}/>
           <Route path="SmartBulb-React/signin" element={<SignIn />}/>
         </Routes>
