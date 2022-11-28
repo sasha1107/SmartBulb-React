@@ -28,6 +28,8 @@ const BtnSubmit = styled.button`
         background-color: #fff;
         color: #fa5c58;
     }
+    font-size: 16px;
+    padding: 12px;
 `
 const HrLine = styled.hr`
     width: 20%;

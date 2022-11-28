@@ -4,31 +4,26 @@ import Logo from '../../Logo';
 import UserForm from '../../UserForm';
 import Footer from '../../Footer';
 
-const SigninSection = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: #efefef;
-    text-align: center;
-    display: flex;
-    flex-direction:column;
-    /* justify-content: ; */
-    align-items: center;
-`
+import {
+    LoginSigninSection,
+    InputIdPw,
+} from './LoginSigninStyle'
+
 
 export default function SignIn() {
     return (
-        <SigninSection>
+        <LoginSigninSection>
             <Navbar/>
             <Logo/>
             <UserForm
                 title="SIGNIN"
                 subtit="회원가입"
                 button="SIGNIN">
-                    <input type="text" placeholder="id"></input>
-                    <input type="password" placeholder="password"></input>
-                    <input type="password" placeholder="password"></input>
+                    <InputIdPw type="text" placeholder="id"></InputIdPw>
+                    <InputIdPw type="password" placeholder="password"></InputIdPw>
+                    <InputIdPw type="password" placeholder="password"></InputIdPw>
             </UserForm>
             <Footer/>
-        </SigninSection>
+        </LoginSigninSection>
     )
 }
