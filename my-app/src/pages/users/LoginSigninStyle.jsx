@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
 export const LoginSigninSection = styled.div`
     width: 100vw;
     height: 100vh;
@@ -27,7 +26,7 @@ export const LinkRegister = styled(Link)`
 `
 export const Forms = styled.form`
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-direction: column; 
     margin: 0 auto;
     gap: 20px;
@@ -82,4 +81,27 @@ export const BtnMypage = styled.button`
 export const BtnCont = styled.div`
     display: flex;
     justify-content: space-around;
+`
+
+export const InpCont = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.1fr;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const ValidIcon = styled.img`
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+`
+
+export const AlertMsg = styled.span`
+    display: block;
+    grid-column-start : 2;
+    text-align: left;
+    /* padding-left: 9em; */
+    font-size: 10px;
+    margin-top: 8px;
+    color: #9e9e9e;
 `

@@ -8,7 +8,8 @@ import {
     LoginSigninSection,
     InputIdPw,
     LinkRegister,
-    Forms
+    Forms,
+    InpCont
 } from './LoginSigninStyle'
 
 import {
@@ -51,29 +52,33 @@ export default function Login() {
             subtit="로그인"
             button="LOGIN">
                 <Forms action="">
-                    <label htmlFor="id">
-                        아이디
-                    </label>
-                    <InputIdPw
-                        type="text"
-                        ref={idInput}
-                        id="id"
-                        value={idVal}
-                        placeholder="id"
-                        pattern="[0-9a-zA-z]*"
-                        required
-                        onChange={onIdChange}
-                    >
-                    </InputIdPw>
-                    <label htmlFor="pw">
-                        비밀번호
-                    </label>
-                    <InputIdPw
-                        type="password"
-                        placeholder="password"
-                        id="pw"
-                        required>
-                    </InputIdPw>
+                    <InpCont>
+                        <label htmlFor="id">
+                            아이디
+                        </label>
+                        <InputIdPw
+                            type="text"
+                            ref={idInput}
+                            id="id"
+                            value={idVal}
+                            placeholder="id"
+                            pattern="[0-9a-zA-z]{4,}"
+                            required
+                            onChange={onIdChange}
+                        >
+                        </InputIdPw>
+                    </InpCont>
+                    <InpCont>
+                        <label htmlFor="pw">
+                            비밀번호
+                        </label>
+                        <InputIdPw
+                            type="password"
+                            placeholder="password"
+                            id="pw"
+                            required>
+                        </InputIdPw>
+                    </InpCont>
             <LinkRegister to="/signin">
                 아직 회원이 아니십니까?
                 <span> 회원가입하기</span>
