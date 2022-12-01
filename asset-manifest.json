@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/SmartBulb-React/static/css/main.06ef3559.css",
-    "main.js": "/SmartBulb-React/static/js/main.1120d741.js",
+    "main.css": "/SmartBulb-React/static/css/main.c4365ea6.css",
+    "main.js": "/SmartBulb-React/static/js/main.69d87b97.js",
     "static/media/logo.png": "/SmartBulb-React/static/media/logo.46751549fc37cbe4bb0c.png",
     "static/media/loading.png": "/SmartBulb-React/static/media/loading.7ac25d07b4e8d42c8a8f.png",
+    "static/media/x-circle.svg": "/SmartBulb-React/static/media/x-circle.41daf2ba01cf74abf1cda618d17b6c6b.svg",
+    "static/media/check-circle.svg": "/SmartBulb-React/static/media/check-circle.943566c107ee1706a6e79e686d119726.svg",
     "index.html": "/SmartBulb-React/index.html",
-    "main.06ef3559.css.map": "/SmartBulb-React/static/css/main.06ef3559.css.map",
-    "main.1120d741.js.map": "/SmartBulb-React/static/js/main.1120d741.js.map"
+    "main.c4365ea6.css.map": "/SmartBulb-React/static/css/main.c4365ea6.css.map",
+    "main.69d87b97.js.map": "/SmartBulb-React/static/js/main.69d87b97.js.map"
   },
   "entrypoints": [
-    "static/css/main.06ef3559.css",
-    "static/js/main.1120d741.js"
+    "static/css/main.c4365ea6.css",
+    "static/js/main.69d87b97.js"
   ]
 }
