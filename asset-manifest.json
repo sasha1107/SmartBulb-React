@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SmartBulb-React/static/css/main.87044006.css",
-    "main.js": "/SmartBulb-React/static/js/main.df6471ee.js",
+    "main.css": "/SmartBulb-React/static/css/main.06ef3559.css",
+    "main.js": "/SmartBulb-React/static/js/main.1120d741.js",
     "static/media/logo.png": "/SmartBulb-React/static/media/logo.46751549fc37cbe4bb0c.png",
     "static/media/loading.png": "/SmartBulb-React/static/media/loading.7ac25d07b4e8d42c8a8f.png",
     "index.html": "/SmartBulb-React/index.html",
-    "main.87044006.css.map": "/SmartBulb-React/static/css/main.87044006.css.map",
-    "main.df6471ee.js.map": "/SmartBulb-React/static/js/main.df6471ee.js.map"
+    "main.06ef3559.css.map": "/SmartBulb-React/static/css/main.06ef3559.css.map",
+    "main.1120d741.js.map": "/SmartBulb-React/static/js/main.1120d741.js.map"
   },
   "entrypoints": [
-    "static/css/main.87044006.css",
-    "static/js/main.df6471ee.js"
+    "static/css/main.06ef3559.css",
+    "static/js/main.1120d741.js"
   ]
 }
