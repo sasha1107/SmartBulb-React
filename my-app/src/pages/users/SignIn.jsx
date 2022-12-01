@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import {
     LoginSigninSection,
     InputIdPw,
+    Forms
 } from './LoginSigninStyle'
 
 
@@ -18,9 +19,11 @@ export default function SignIn() {
                 title="SIGNIN"
                 subtit="회원가입"
                 button="SIGNIN">
-                    <InputIdPw type="text" placeholder="id"></InputIdPw>
-                    <InputIdPw type="password" placeholder="password"></InputIdPw>
-                    <InputIdPw type="password" placeholder="password"></InputIdPw>
+                <Forms action="">
+                    <InputIdPw type="text" placeholder="id" id="id" required></InputIdPw>
+                    <InputIdPw type="password" placeholder="password" className="pw" id='pw' required></InputIdPw>
+                    <InputIdPw type="password" placeholder="password" className="pw check" id='pwCheck' required></InputIdPw>
+                </Forms>
             </UserForm>
             <Footer/>
         </LoginSigninSection>

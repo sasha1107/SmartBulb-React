@@ -12,6 +12,7 @@ export const LoginSigninSection = styled.div`
 `
 export const InputIdPw = styled.input`
 background: #f1f4f7;
+display: block;
 border: none;
 font-size: 16px;
 padding: 12px;
@@ -24,7 +25,13 @@ export const LinkRegister = styled(Link)`
         font-weight: 700;
     }
 `
-
+export const Forms = styled.form`
+    display: flex;
+    width: 60%;
+    flex-direction: column; 
+    margin: 0 auto;
+    gap: 20px;
+`
 // export const MyPageSection = styled.div`
 //     display: flex;
 //     flex-direction: column;

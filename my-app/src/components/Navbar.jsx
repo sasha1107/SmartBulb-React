@@ -6,7 +6,7 @@ import {
   MenuTitle,
   MenuList,
   LinkButton
-} from "./Navbar.style";
+} from "./navbar.style";
 
 const iconStyle = {
   width: "30px",
