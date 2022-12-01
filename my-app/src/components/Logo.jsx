@@ -6,10 +6,9 @@ const LogoImg = styled.img`
     width: 70px;
     margin: 20px;
 `
-
 export default function Logo() {
     return (
-    <Link to="/SmartBulb-React/">
+    <Link to="/">
             <h1 className='ir'>Logo</h1>
             <LogoImg src={logo} alt="logo image"/>
     </Link>

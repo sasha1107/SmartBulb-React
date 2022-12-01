@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import React from 'react'
-import Navbar from '../../Navbar'
-import Footer from '../../Footer'
-import Logo from '../../Logo'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import Logo from '../../components/Logo'
 import Calendar from "./Calendar";
 
 const DiarySection = styled.div`

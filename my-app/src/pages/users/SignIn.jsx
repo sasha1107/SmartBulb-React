@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import Navbar from '../../Navbar';
-import Logo from '../../Logo';
-import UserForm from '../../UserForm';
-import Footer from '../../Footer';
+import Navbar from '../../components/Navbar';
+import Logo from '../../components/Logo';
+import UserForm from '../../components/UserForm';
+import Footer from '../../components/Footer';
 
 import {
     LoginSigninSection,

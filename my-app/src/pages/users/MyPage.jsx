@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../../Navbar'
-import Logo from '../../Logo'
-import Footer from '../../Footer'
-import UserForm from '../../UserForm'
-import Login from './Login'
+import Navbar from '../../components/Navbar'
+import Logo from '../../components/Logo'
+import Footer from '../../components/Footer'
+import UserForm from '../../components/UserForm'
+// import Login from './Login'
 import { FaRegLightbulb, FaChartPie } from "react-icons/fa";
 
 import { 

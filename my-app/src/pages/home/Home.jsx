@@ -1,8 +1,9 @@
 import React from 'react'
-import Footer from '../../Footer.jsx'
-import Navbar from '../../Navbar.jsx'
+import Footer from '../../components/Footer.jsx'
+import Navbar from '../../components/Navbar.jsx'
 import styled, { keyframes } from "styled-components";
 import logo from './img/loading.png'
+import { useNavigate } from 'react-router-dom';
 
 const LogoAni = keyframes`
     100% { 
@@ -56,6 +57,12 @@ export default function Home() {
         img : 'https://i.pinimg.com/564x/39/e6/60/39e66091250c901c35c090355250a724.jpg'
     }
 
+    const navigate = useNavigate();
+ 
+    const navigateToLogin = () => {
+        navigate("/login");
+    };
+    
     return (
     <HomeSection>
         <Navbar/>
@@ -64,7 +71,7 @@ export default function Home() {
         {
             user.login ?
             <p>{user.id}님 안녕하세요 :)</p> : 
-            <BtnLogin>LOGIN</BtnLogin>
+            <BtnLogin onClick={navigateToLogin}>LOGIN</BtnLogin>
         }
         <Footer/>
     </HomeSection>
