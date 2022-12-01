@@ -18,7 +18,7 @@ export const SubTitle = styled.p`
     font-size: 16px;
 `
 export const BtnSubmit = styled.button`
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     background: #fa5c58;
     border: 2px solid #fa5c58;

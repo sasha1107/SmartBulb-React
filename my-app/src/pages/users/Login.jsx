@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import Logo from '../../components/Logo';
@@ -13,7 +14,6 @@ import {
 import {
     BtnSubmit
 } from '../../components/userForm.style'
-import { useState, useRef } from 'react';
 
 export default function Login() {
     const idInput = useRef(null)
@@ -53,7 +53,6 @@ export default function Login() {
                 <Forms action="">
                     <label htmlFor="id">
                         아이디
-                        <span>영문,숫자 5자 이상</span>
                     </label>
                     <InputIdPw
                         type="text"
@@ -73,7 +72,8 @@ export default function Login() {
                         type="password"
                         placeholder="password"
                         id="pw"
-                        required></InputIdPw>
+                        required>
+                    </InputIdPw>
             <LinkRegister to="/signin">
                 아직 회원이 아니십니까?
                 <span> 회원가입하기</span>
