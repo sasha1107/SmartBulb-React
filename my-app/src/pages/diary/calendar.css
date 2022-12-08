@@ -24,8 +24,13 @@ table {
     font-weight: 600;
 }
 
-.date:hover {
+.date:is(.null){
     background:rgba(81, 81, 81, 0.1);
+    cursor: inherit;
+}
+.date:not(.null):hover {
+    
+    background:#fa5b5828;
 }
 th:first-child,
 td:first-child {

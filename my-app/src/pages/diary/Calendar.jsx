@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './calendar.css'
+import { useNavigate } from "react-router-dom";
+
 
 const CalendarSection = styled.div`
     display: flex;
@@ -36,8 +38,8 @@ const BtnMonth = styled.button`
     border: 1px solid rgb(81, 81, 81);
     color: inherit;
     cursor: pointer;
-    &:active {
-        background:rgba(81, 81, 81, 0.3);
+    &:hover {
+        background: #fa5b5828;
     }
 `
 
@@ -45,6 +47,14 @@ export default function Calendar() {
     const [calendar, setCalendar] = useState(null)
     const [month, setMonth] = useState(new Date().getMonth() + 1)
     const [year, setYear] = useState(new Date().getFullYear())
+    const navigate = useNavigate();
+
+    function handleClickDate(e) {
+        // console.log(e.target.textContent)
+        // console.log(year)
+        // console.log(month)
+        navigate("new", { state: [year,month, ~~(e.target.textContent)] })
+    }
 
     function displayCalendar(newYear, newMonth){
         const time = new Date(newYear, newMonth - 1, 1);
@@ -74,10 +84,10 @@ export default function Calendar() {
         for (let i = 0; i < 6; i++){
             for (let j = 0; j < 7; j++){
                 if (result[i][j] !== 0){
-                    temp2.push(<td key={idx++} className="date">{result[i][j]}</td>)
+                    temp2.push(<td key={idx++} className="date" onClick={handleClickDate}>{result[i][j]}</td>)
                 }
                 else {
-                    temp2.push(<td key={idx++} className="date"></td>)
+                    temp2.push(<td key={idx++} className="date null"></td>)
                 }
             }
             renderCalendar.push(<tr key={idx++}>{temp2}</tr>)
